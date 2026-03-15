@@ -1,0 +1,1 @@
+sed -i 's/if (err instanceof AxiosError && err.response?.data?.message)/if (err instanceof AxiosError \&\& (err.response?.data as any)?.message)/g' src/features/auth/components/LoginForm.tsx src/features/auth/components/RegisterForm.tsx
